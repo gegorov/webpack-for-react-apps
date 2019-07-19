@@ -1,1 +1,10 @@
-console.log('hello world ... from webpack!');
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+
+class App extends Component {
+  render() {
+    return <p>Hello from React</p>;
+  }
+}
+
+render(<App />, document.getElementById('app'));

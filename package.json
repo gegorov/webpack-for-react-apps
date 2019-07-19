@@ -4,6 +4,7 @@
   "description": "webpack for react apps",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack -d",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +23,15 @@
   },
   "homepage": "https://github.com/gegorov/webpack-for-react-apps#readme",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
