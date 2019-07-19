@@ -1,0 +1,28 @@
+{
+  "name": "webpack-for-react-apps",
+  "version": "1.0.0",
+  "description": "webpack for react apps",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gegorov/webpack-for-react-apps.git"
+  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": "gegorov",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/gegorov/webpack-for-react-apps/issues"
+  },
+  "homepage": "https://github.com/gegorov/webpack-for-react-apps#readme",
+  "devDependencies": {
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
