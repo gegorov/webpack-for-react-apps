@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack -d --watch",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "http-server": "http-server dist/"
   },
   "repository": {
     "type": "git",
@@ -24,11 +24,14 @@
   "homepage": "https://github.com/gegorov/webpack-for-react-apps#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
     "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^5.0.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
@@ -37,7 +40,11 @@
     "webpack-cli": "^3.3.6"
   },
   "dependencies": {
+    "bundle-loader": "^0.5.6",
+    "http-server": "^0.11.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1"
   }
 }

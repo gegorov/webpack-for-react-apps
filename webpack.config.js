@@ -6,7 +6,7 @@ const APP_DIR = path.join(__dirname, 'src');
 
 const config = {
   // mode: "development",
-  entry: `${APP_DIR}/app.js`,
+  entry: `${APP_DIR}/index.js`,
   output: {
     path: BUILD_DIR,
     filename: 'app.bundle.js',
