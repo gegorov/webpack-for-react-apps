@@ -4,7 +4,8 @@
   "description": "webpack for react apps",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -d --watch",
+    "dev": "webpack -d",
+    "dev-watch": "webpack -d --watch",
     "build": "webpack",
     "http-server": "http-server dist/"
   },
