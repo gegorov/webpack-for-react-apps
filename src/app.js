@@ -1,11 +1,20 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import Loadable from 'react-loadable';
+
+import path from 'path';
 
 import * as BooksAPI from './BooksAPI';
 
 import Home from './Components/Home';
 import SearchPage from './Components/SearchPage';
-import BookDetails from './Components/BookDetails';
+// import BookDetails from './Components/BookDetails';
+import Loading from './Components/Loading';
+
+const loadableBookDetails = Loadable({
+  loader: () => import('./Components/BookDetails'),
+  loading: Loading,
+});
 
 class BooksApp extends React.Component {
   constructor(props) {
@@ -56,7 +65,7 @@ class BooksApp extends React.Component {
         {/* Book Details Route */}
         <Route
           path='/details/:bookId'
-          component={BookDetails}
+          component={loadableBookDetails}
         />
 
         {/* Home Page Route */}
