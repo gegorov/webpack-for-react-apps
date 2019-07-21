@@ -1,0 +1,9 @@
+body {
+  background: #89CFF0;
+}
+
+.apple {
+  background: url('./socicon_apple.svg');
+  width: 100px;
+  height: 100px;
+}

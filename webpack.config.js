@@ -23,6 +23,17 @@ const config = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ],
+      },
+      {
+        test: /\.(png|svg|jpе?g|gif)$/i,
+        use: 'file-loader',
+      },
     ],
   }
 }
