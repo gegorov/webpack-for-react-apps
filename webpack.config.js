@@ -17,7 +17,7 @@ const config = {
   },
   output: {
     path: BUILD_DIR,
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
   },
   module: {
     rules: [
@@ -52,6 +52,13 @@ const config = {
       },
     ],
   },
+  devServer: {
+    contentBase: BUILD_DIR,
+    compress: true,
+    port: 9000,
+    disableHostCheck: false,
+    hot: true,
+  },
   plugins: [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
@@ -59,6 +66,7 @@ const config = {
       title: 'My Reads from LinkedIn Learning Course',
     }),
     new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   optimization: {
     splitChunks: {
