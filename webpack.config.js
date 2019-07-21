@@ -1,5 +1,7 @@
 const path = require('path');
-const htmlWebpackPlugin =require('html-webpack-plugin');
+const webpack = require('webpack'); 
+const HtmlWebpackPlugin =require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const BUILD_DIR = path.join(__dirname, 'dist');
 const APP_DIR = path.join(__dirname, 'src');
@@ -15,7 +17,7 @@ const config = {
   },
   output: {
     path: BUILD_DIR,
-    filename: '[name].js',
+    filename: '[name].[chunkhash].js',
   },
   module: {
     rules: [
@@ -51,10 +53,12 @@ const config = {
     ],
   },
   plugins: [
-    new htmlWebpackPlugin({
+    new webpack.ProgressPlugin(),
+    new HtmlWebpackPlugin({
       template: 'src/index.html',
       title: 'My Reads from LinkedIn Learning Course',
     }),
+    new CleanWebpackPlugin(),
   ],
   optimization: {
     splitChunks: {
