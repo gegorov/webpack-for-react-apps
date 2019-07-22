@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build:dev": "webpack -d --watch",
-    "build": "webpack"
+    "build:prod": "NODE_ENV=production && webpack -p",
+    "build": "webpack",
+    "deploy-gh": "npm run build && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
